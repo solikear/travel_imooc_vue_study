@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
-    <div>home</div>
-    <router-link to="/list">列表页</router-link>
-  </div>
+<div>
+  HelloWorld
+</div>
 </template>
 
 <script>
@@ -12,7 +11,5 @@ export default {
 </script>
 
 <style>
-.home {
-  font-size: 50px;
-}
+
 </style>
