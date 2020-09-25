@@ -31,8 +31,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
 // 用配置好的别名的话 要在前面加~
+@import "~styles/varibles.styl"
 .header
   display: flex
   line-height: .86rem
