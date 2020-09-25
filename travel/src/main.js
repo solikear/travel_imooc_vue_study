@@ -7,8 +7,9 @@ import store from './store'
 import fastClick from 'fastclick'
 
 //reset.css 重置一些特定样式 让不同浏览器下效果一致
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+import 'styles/reset.css'
+import 'styles/border.css'
+import  'styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
