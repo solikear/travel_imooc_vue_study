@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// 样式穿透
+//修改在wrapper 下 的swiper-xxx-xxx class 就算是外部组件也一样
 .wrapper >>> .swiper-pagination-bullet-active
   background #fff
 
