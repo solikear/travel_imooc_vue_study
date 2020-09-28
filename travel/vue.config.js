@@ -13,10 +13,23 @@ function resolve(dir) {
 }
 
 module.exports = {
+    lintOnSave: false,
     chainWebpack: (config) => {
         config.resolve.alias
             .set('@', resolve('src'))
             // .set('assets', resolve('src/assets/styles'))
             .set('styles', resolve('src/assets/styles'))
+    },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                changeOrigin: true, // needed for virtual hosted sites
+                ws: true, // proxy websockets
+                pathRewrite: {
+                    '^/api': '/mock'
+                }
+            }
+        }
     },
 }
