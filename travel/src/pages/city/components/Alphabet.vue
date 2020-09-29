@@ -50,7 +50,7 @@ export default {
     handleTouchStart() {
       this.touchStatus = true;
     },
-    handleTouchMove(e) {
+    handleTouchMove: function (e) {
       if (this.touchStatus) {
         if (this.timer) {
           clearTimeout(this.timer)
@@ -59,7 +59,7 @@ export default {
           console.log(this.startY)
           //元素在字母表上的高度
           const touchY = e.touches[0].clientY - this.startY;
-          console.log(`原来高度：${e.touches[0].clientY} 在字母表上的高度:${touchY}`)
+          // console.log(`原来高度：${e.touches[0].clientY} 在字母表上的高度:${touchY}`)
           const index = Math.floor((touchY - this.startY) / 20);
           if (index >= 0 && index < this.letters.length) {
             this.$emit("change", this.letters[index]);
