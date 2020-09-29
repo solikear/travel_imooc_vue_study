@@ -1,14 +1,14 @@
 <template>
   <ul class="list">
     <li
-      class="item"
-      v-for="letter of letters"
-      :key="letter"
-      :ref="letter"
-      @touchstart="handleTouchStart"
-      @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
-      @click="handleLetterClick"
+        class="item"
+        v-for="letter of letters"
+        :key="letter"
+        :ref="letter"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+        @click="handleLetterClick"
     >
       {{ letter }}
     </li>
@@ -29,11 +29,19 @@ export default {
       }
       return letters;
     },
+    startY(){
+      return this.$refs["A"][0].offsetTop;
+    }
   },
   data() {
     return {
       touchStatus: false,
+      // startY: 0
     };
+  },
+  updated() {
+    // 字母A到Header底部之间的距离
+    console.log("updated")
   },
   methods: {
     handleLetterClick(e) {
@@ -44,13 +52,19 @@ export default {
     },
     handleTouchMove(e) {
       if (this.touchStatus) {
-        // 字母A到Header底部之间的距离
-        const startY = this.$refs["A"][0].offsetTop;
-        const touchY = e.touches[0].clientY - 79;
-        const index = Math.floor((touchY - startY) / 20);
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit("change", this.letters[index]);
+        if (this.timer) {
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          console.log(this.startY)
+          //元素在字母表上的高度
+          const touchY = e.touches[0].clientY - this.startY;
+          console.log(`原来高度：${e.touches[0].clientY} 在字母表上的高度:${touchY}`)
+          const index = Math.floor((touchY - this.startY) / 20);
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit("change", this.letters[index]);
+          }
+        }, 16)
       }
     },
     handleTouchEnd() {
