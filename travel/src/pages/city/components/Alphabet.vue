@@ -37,6 +37,7 @@ export default {
     return {
       touchStatus: false,
       // startY: 0
+      timer:null
     };
   },
   updated() {
