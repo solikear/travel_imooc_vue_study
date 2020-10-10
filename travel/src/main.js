@@ -13,7 +13,7 @@ import store from "./store";
 //轮播插件
 import VueAwesomeSwiper from "vue-awesome-swiper";
 //解决移动端上300ms点击延迟
-import fastClick from "fastclick";
+// import fastClick from "fastclick";
 
 //reset.css 重置一些特定样式 让不同浏览器下效果一致
 import "styles/reset.css";
@@ -27,7 +27,7 @@ import "styles/iconfont.css";
 import "swiper/dist/css/swiper.css"
 
 Vue.config.productionTip = false;
-fastClick.attach(document.body);
+// fastClick.attach(document.body);
 Vue.use(VueAwesomeSwiper);
 
 new Vue({

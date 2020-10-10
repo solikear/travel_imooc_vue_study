@@ -59,7 +59,9 @@ export default {
   },
   updated() {
     this.$nextTick(() => {
-      this.scroll = new Bscroll(this.$refs.wrapper);
+      this.scroll = new Bscroll(this.$refs.wrapper,{
+        click:true
+      });
       // console.log(mapState(['city']))
     });
   },
