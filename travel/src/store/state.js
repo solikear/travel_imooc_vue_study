@@ -4,7 +4,7 @@ try {
         defaultCity = localStorage.city
     }
 } catch (e) {
-
+    console.log(e)
 }
 
 export default {
