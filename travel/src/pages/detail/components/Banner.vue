@@ -2,16 +2,16 @@
   <div>
     <div class="banner" @click="handleBannerClick">
       <img class="banner-img"
-           src="https://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg"/>
+           :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title">俊龙大炮阵地</div>
+        <div class="banner-title">{{ sightName }}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe692;</span>
-          39
+          {{ galleryImgs.length }}
         </div>
       </div>
     </div>
-    <common-gallery :imgs="imgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+    <common-gallery :imgs="galleryImgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
   </div>
 </template>
 
@@ -20,9 +20,13 @@ import CommonGallery from 'common/gallery/Gallery'
 
 export default {
   name: "DetailBanner",
+  props:{
+    sightName:String,
+    bannerImg:String,
+    galleryImgs:Array
+  },
   data(){
     return {
-      imgs:["https://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg", "https://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"],
       showGallery:false
     }
   },
