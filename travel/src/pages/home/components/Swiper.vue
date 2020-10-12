@@ -21,7 +21,9 @@ export default {
         pagination: {
           el: '.swiper-pagination'
         },
-        loop:true
+        loop:true,
+        // observeParents:true,
+        // observer:true,
       },
     }
   },

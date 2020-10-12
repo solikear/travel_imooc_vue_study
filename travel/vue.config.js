@@ -19,6 +19,7 @@ module.exports = {
             .set('@', resolve('src'))
             // .set('assets', resolve('src/assets/styles'))
             .set('styles', resolve('src/assets/styles'))
+            .set('common', resolve('src/common'))
     },
     devServer: {
         proxy: {
