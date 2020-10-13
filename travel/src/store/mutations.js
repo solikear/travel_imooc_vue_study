@@ -6,5 +6,11 @@ export default {
         } catch (e) {
             console.log(e)
         }
-    }
+    },
+    showLoading(state){
+      state.loading = true
+    },
+    hideLoading(state){
+        state.loading = false
+    },
 }

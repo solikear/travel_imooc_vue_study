@@ -30,6 +30,9 @@ import "styles/iconfont.css";
 所以安装 vue-awesome-swiper 3.1.3版本
 2020-09-25 14:47:09
  */
+// import { Loading } from 'vant';
+// Vue.use(Loading);
+
 import "swiper/dist/css/swiper.css"
 
 Vue.config.productionTip = false;

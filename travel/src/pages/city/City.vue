@@ -4,8 +4,8 @@
     <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
     <city-alphabet
-      :cities="cities"
-      @change="handleLetterChange"
+        :cities="cities"
+        @change="handleLetterChange"
     ></city-alphabet>
   </div>
 </template>
@@ -15,7 +15,8 @@ import CityHeader from "./components/Header";
 import CitySearch from "./components/Search";
 import CityList from "./components/List";
 import CityAlphabet from "./components/Alphabet";
-import axios from "axios";
+// import axios from "axios";
+import {getCityInfo} from '@/service/city'
 
 export default {
   name: "City",
@@ -26,7 +27,8 @@ export default {
     CityAlphabet,
   },
   mounted() {
-    axios.get("/api/city.json").then(this.getCityInfoSucc);
+    // axios.get("/api/city.json").then(this.getCityInfoSucc);
+    this.getCityInfo()
   },
   data() {
     return {
@@ -36,8 +38,13 @@ export default {
     };
   },
   methods: {
+    async getCityInfo() {
+      let data = await getCityInfo()
+      this.getCityInfoSucc(data)
+    },
     getCityInfoSucc(res) {
-      res = res.data;
+      // console.log(res)
+      // res = res.data;
       if (res.ret && res.data) {
         const data = res.data;
         this.hotCities = data.hotCities;

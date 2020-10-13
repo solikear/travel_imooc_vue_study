@@ -14,8 +14,9 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
-import axios from 'axios'
+// import axios from 'axios'
 import {mapState} from 'vuex'
+import {getHomeInfo} from '@/service/home'
 
 export default {
   name: 'Home',
@@ -36,12 +37,15 @@ export default {
     }
   },
   methods: {
-    getHomeInfo() {
-      axios.get(`/api/index.json?city=${this.city}`).then(this.getHomeInfoSucc)
+    async getHomeInfo() {
+      // axios.get(`/api/index.json?city=${this.city}`).then(this.getHomeInfoSucc)
+      let data = await getHomeInfo(this.city)
+      console.log(data)
+      this.getHomeInfoSucc(data)
     },
     getHomeInfoSucc(res) {
       // console.log(res)
-      res = res.data
+      // res = res.data
       if (res.ret && res.data) {
         const data = res.data
         // this.city = data.city
@@ -57,8 +61,8 @@ export default {
   },
   // 只触发一次
   mounted() {
-    this.lastCity = this.city
     this.getHomeInfo()
+    this.lastCity = this.city
   },
   //keepalive下 回到缓存页面时候触发的生命周期钩子
   activated() {
