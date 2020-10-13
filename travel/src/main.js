@@ -20,7 +20,7 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 //用babel-polyfill可以让低版本浏览器兼容promise
 // 原理是 把promise方法补充到了JS里
 import  'babel-polyfill'
-
+import  'element-ui/lib/theme-chalk/index.css'
 //reset.css 重置一些特定样式 让不同浏览器下效果一致
 import "styles/reset.css";
 import "styles/border.css";
