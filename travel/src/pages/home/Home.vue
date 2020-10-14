@@ -16,7 +16,7 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 // import axios from 'axios'
 import {mapState} from 'vuex'
-import {getHomeInfo} from '@/service/home'
+// import {getHomeInfo} from '@/api/home'
 
 export default {
   name: 'Home',
@@ -39,7 +39,7 @@ export default {
   methods: {
     async getHomeInfo() {
       // axios.get(`/api/index.json?city=${this.city}`).then(this.getHomeInfoSucc)
-      let data = await getHomeInfo(this.city)
+      let data = await this.$api.home.getHomeInfo(this.city)
       console.log(data)
       this.getHomeInfoSucc(data)
     },

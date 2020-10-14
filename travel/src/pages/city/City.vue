@@ -16,7 +16,7 @@ import CitySearch from "./components/Search";
 import CityList from "./components/List";
 import CityAlphabet from "./components/Alphabet";
 // import axios from "axios";
-import {getCityInfo} from '@/service/city'
+// import {getCityInfo} from '@/api/city'
 
 export default {
   name: "City",
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     async getCityInfo() {
-      let data = await getCityInfo()
+      let data = await this.$api.city.getCityInfo()
       this.getCityInfoSucc(data)
     },
     getCityInfoSucc(res) {

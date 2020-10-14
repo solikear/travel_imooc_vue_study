@@ -16,7 +16,7 @@
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
-import {getDetailInfo} from '@/service/detail'
+// import {getDetailInfo} from '@/api/detail'
 
 export default {
   name: "Detail",
@@ -41,7 +41,7 @@ export default {
       //   }
       // }).then(this.handleGetDataSuccess)
      let detailId = this.$route.params.id;
-     let data = await getDetailInfo(detailId)
+     let data = await this.$api.detail.getDetailInfo(detailId)
      this.handleGetDataSuccess(data)
     },
     handleGetDataSuccess(res) {
