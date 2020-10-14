@@ -1,9 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import VueRouter, { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
-Vue.use(VueRouter)
 
 const originalPush = VueRouter.prototype.push
 
@@ -29,8 +27,10 @@ const routes = [
     },
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+    history: createWebHashHistory(),
     routes,
+
     scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition

@@ -2,7 +2,7 @@ import axios from 'axios'
 // import { Toast } from 'vant'
 // import router from '../router'
 import {Message, Loading} from 'element-ui'
-import qs from 'qs'
+// import qs from 'qs'
 
 // const url = "http://localhost:8080/mock"
 function getBaseUrl(env){
