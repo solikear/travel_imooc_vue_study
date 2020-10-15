@@ -6,7 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: \travel_imooc_vue\travel\src\main.js
  */
-import Vue, { createApp } from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -46,6 +46,6 @@ import "styles/iconfont.css";
 import "swiper/dist/css/swiper.css"
 
 // fastClick.attach(document.body);
-Vue.use(VueAwesomeSwiper);
+// Vue.use(VueAwesomeSwiper);
 
-createApp(App).use(router).use(store).mount("#app");
+createApp(App).use(router).use(store).use(VueAwesomeSwiper).mount("#app");
