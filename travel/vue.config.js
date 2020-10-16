@@ -22,9 +22,11 @@ module.exports = {
             .set('common', resolve('src/common'))
     },
     devServer: {
+        port:"8088",
+        open:"true",
         proxy: {
             '/api': {
-                target: 'http://localhost:8080',
+                target: 'http://localhost:8088',
                 changeOrigin: true, // needed for virtual hosted sites
                 ws: true, // proxy websockets
                 pathRewrite: {
