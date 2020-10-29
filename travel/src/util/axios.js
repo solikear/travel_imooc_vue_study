@@ -2,12 +2,12 @@ import axios from 'axios'
 // import { Toast } from 'vant'
 // import router from '../router'
 import {Message, Loading} from 'element-ui'
-import qs from 'qs'
+// import qs from 'qs'
 
 // const url = "http://localhost:8080/mock"
 function getBaseUrl(env){
     let urls = {
-        production: "http://localhost:8080/mock",
+        production: "http://127.0.0.1/mock",
         development: '/api',
         test: 'http://localhost:3001',
     }
