@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3222371-bd29-428e-9f05-b4b5cb8f8e4c" name="Default Changelist" comment="test Jenkin">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/travel_imooc_vue.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c3222371-bd29-428e-9f05-b4b5cb8f8e4c" name="Default Changelist" comment="修改了axios.js 基础IP的获取方法，因为部署在阿里云上，用Nginx进行部署，所以对生产环境的IP进行了变动">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/src/util/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/travel/src/util/axios.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +67,7 @@
       <workItem from="1603768572206" duration="253000" />
       <workItem from="1603867898217" duration="1596000" />
       <workItem from="1603950229650" duration="15000" />
-      <workItem from="1603950534848" duration="309000" />
+      <workItem from="1603950534848" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="test Jenkin">
       <created>1603933640020</created>
@@ -95,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603934045677</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改了axios.js 基础IP的获取方法，因为部署在阿里云上，用Nginx进行部署，所以对生产环境的IP进行了变动">
+      <created>1603951065471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603951065471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,17 +117,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test Jenkin" />
-    <option name="LAST_COMMIT_MESSAGE" value="test Jenkin" />
+    <MESSAGE value="修改了axios.js 基础IP的获取方法，因为部署在阿里云上，用Nginx进行部署，所以对生产环境的IP进行了变动" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了axios.js 基础IP的获取方法，因为部署在阿里云上，用Nginx进行部署，所以对生产环境的IP进行了变动" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1074" y="403" key="FileChooserDialogImpl" timestamp="1603070556177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1074" y="403" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603070556177" />
-    <state x="422" y="269" key="Vcs.Push.Dialog.v2" timestamp="1603950539977">
+    <state x="422" y="269" key="Vcs.Push.Dialog.v2" timestamp="1603951103428">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="422" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603950539977" />
+    <state x="422" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603951103428" />
     <state x="617" y="438" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603867988379">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

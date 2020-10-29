@@ -5,9 +5,11 @@ import {Message, Loading} from 'element-ui'
 // import qs from 'qs'
 
 // const url = "http://localhost:8080/mock"
+
+
 function getBaseUrl(env){
     let urls = {
-        production: "http://127.0.0.1/mock",
+        production: "http://120.27.208.65/mock",
         development: '/api',
         test: 'http://localhost:3001',
     }
